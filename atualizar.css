@@ -1,0 +1,17 @@
+body{
+    height: 200%;
+    overflow: hidden;
+    background-color: aliceblue;}
+.cont{
+    margin-top: 6%;
+    align-items: center;
+    justify-content: center;
+}
+.cad{
+    margin-top: 3%;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(21, 32, 190);
+    border-radius: 50px;
+    color: aliceblue;
+}
