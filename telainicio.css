@@ -1,0 +1,8 @@
+body{
+    box-sizing: border-box;
+    background-image: url(https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/1/2023/02/informatica-para-negocios_Gerd-Altmann_Pixabay.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+}
