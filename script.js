@@ -1,34 +1,15 @@
-window.addEventListener("load", function(){
-    let nome = document.getElementById("nome")
-    let dataNascimento = document.getElementById("dataNascimento")
-    let nomeMae = document.getElementById("nomeMae")
-    let nomePai = document.getElementById("nomePai")
-    let cidade = document.getElementById("cidade")
-    let curso = document.getElementById("curso")
-    let salvar = document.getElementById("btnAdd")
-    var paragrafo = document.getElementById('mostrar')
+function salvar() {
+    localStorage.nome = document.getElementById('nome').value
+    localStorage.dataNascimento = document.getElementById('dataNascimento').value
+    localStorage.nomeMae = document.getElementById('nomeMae').value
+    localStorage.nomePai = document.getElementById('nomePai').value
+    localStorage.cidade = document.getElementById('cidade').value
+    localStorage.curso = document.getElementById('curso').value
+}
 
-
-    salvar.addEventListener('click', function(){
-        var dados = {"nome" : nome.value, "dataNascimento" : dataNascimento.value,
-        "nomeMae" : nomeMae.value, "nomePai" : nomePai.value, "cidade" : cidade.value,
-        "curso" : curso.value}
-        var ls = localStorage.getItem("infos")
-
-        if(ls){
-            var json = JSON.parse(ls)
-            json.push(dados)
-            json = JSON.stringify(json)
-            localStorage.setItem("infos", json)
-        }else{
-            localStorage.setItem("infos", JSON.stringify([dados]))
-        }
-        var ls_array = JSON.parse(localStorage.getItem("infos"))
-        var texto = ''
-        for(var item of ls_array){
-            texto += "Nome: "+ item.nome + "<br>Data de Nascimento: "+ item.dataNascimento +
-            "<br>Nome Mãe: "+ item.nomeMae + "<br>Nome Pai: " + item.nomePai + "<br>Cidade: "+ item.cidade
-            "<br>Curso: " + item.curso} 
-            paragrafo.innerHTML = texto
-    })
-})
+document.getElementById('nome').innerHTML = `${localStorage.nome}`
+document.getElementById('datanasc').innerHTML = `${localStorage.dataNascimento}`
+document.getElementById('nomepai').innerHTML = `${localStorage.nomePai}`
+document.getElementById('nomemae').innerHTML = `${localStorage.nomeMae}`
+document.getElementById('cidade').innerHTML = `${localStorage.cidade}`
+document.getElementById('curso').innerHTML = `${localStorage.curso}`
