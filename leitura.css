@@ -1,0 +1,21 @@
+body{
+    align-items: center;
+    
+}
+.let{
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(21, 32, 190);
+    border-radius: 50px;
+    color: aliceblue;
+    
+}
+.table{
+    margin-top: 3%;
+    align-items: center;
+    justify-content: center; 
+}
